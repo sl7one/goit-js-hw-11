@@ -1,0 +1,79 @@
+:root {
+  --main: #31322e;
+}
+
+body {
+  background: var(--main);
+  font-family: "Open Sans", sans-serif;
+}
+
+.search {
+  min-width: 500px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #e1c27f;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #e1c27f;
+}
+
+.searchTerm:focus {
+  color: black;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #e1c27f;
+  background: #e1c27f;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 50px;
+  background-color: #2f4f4f;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  color: rgb(225, 194, 127);
+  gap: 5px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.photo-card {
+  background-color: darkslategrey;
+  border-radius: 10px;
+  overflow: hidden;
+}/*# sourceMappingURL=index.css.map */
