@@ -4,12 +4,12 @@ import { request } from './js/requestAPI.js';
 import { render } from './js/render.js';
 import { query } from './js/query.js';
 import { notifyMessage } from './js/notify.js';
+import { smoothScroll } from './js/smoothScroll.js';
 
 refs.form.addEventListener('submit', onClickSerch);
 
 async function onClickSerch(event) {
   event.preventDefault();
-
   try {
     const userQuery = event.currentTarget.elements[0].value
       .trim()
@@ -27,6 +27,7 @@ async function onClickSerch(event) {
     render.print(hits);
 
     refs.form.reset();
+    smoothScroll(refs.gallery.offsetHeight, query.getPage());
   } catch {
     console.log('error data');
   }
@@ -45,6 +46,7 @@ async function onClickLoadMore() {
     notifyMessage.endOfPage(totalHits);
     btnLoadMore.checkForShow(totalHits);
     render.print(hits);
+    smoothScroll(refs.gallery.offsetHeight, query.getPage());
   } catch {
     console.log('error data');
   }
