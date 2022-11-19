@@ -14,11 +14,15 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 
 .photo-card {
   background-color: darkslategrey;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.load-more {
+  margin-top: 20px;
 }

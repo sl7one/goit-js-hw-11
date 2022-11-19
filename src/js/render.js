@@ -15,9 +15,11 @@ export const render = {
         downloads,
       } = item;
 
+      console.log(tags);
+
       return (acc += `<div class="photo-card">
       <a href='${largeImageURL}'>
-      <img src="${webformatURL}" alt="" loading="lazy" width=300 height=200/>
+  <img src="${webformatURL}" alt="${tags}" loading="lazy" width='300' height='200'/>
       </a>
         <div class="info"><p class="info-item">Likes :
             <b>${likes}</b></p><p class="info-item">Views :<b> ${views}</b></p>
@@ -32,6 +34,8 @@ export const render = {
 
     const lightbox = new SimpleLightbox('.gallery a', {
       scrollZoom: false,
+      captionType: 'alt',
+      captionsData: 'alt',
     });
   },
   clear() {

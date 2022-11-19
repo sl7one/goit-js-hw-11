@@ -1,6 +1,6 @@
 const axios = require('axios').default;
 const API_KEY = `31355844-a483d10f60d89145c2ddc6122`;
-export const per_page = 40;
+export const per_page = 100;
 
 export async function request(request, page = 1) {
   try {
