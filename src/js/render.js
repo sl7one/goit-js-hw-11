@@ -15,8 +15,6 @@ export const render = {
         downloads,
       } = item;
 
-      console.log(tags);
-
       return (acc += `<div class="photo-card">
       <a href='${largeImageURL}'>
   <img src="${webformatURL}" alt="${tags}" loading="lazy" width='300' height='200'/>
